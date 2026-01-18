@@ -1,0 +1,98 @@
+/* Theme Name: Abyssal Octopus
+   Author: Gemini
+   Description: A deep-sea theme with teal, blue, and purple accents.
+*/
+
+body {
+  /* --- Color Palette --- */
+  --deep-ocean: #050814;       /* Very dark blue/black background */
+  --shallow-water: #0f172a;    /* Slightly lighter blue for sidebars */
+  --biolum-teal: #00f2ff;      /* Bright Teal accent */
+  --electric-purple: #bd00ff;  /* Bright Purple accent */
+  --tentacle-blue: #3b82f6;    /* Mid-tone blue */
+  --text-main: #e2e8f0;        /* Off-white text */
+  --text-muted: #94a3b8;       /* Muted text */
+
+  /* --- Obsidian Variables Overrides --- */
+  --background-primary: var(--deep-ocean);
+  --background-secondary: var(--shallow-water);
+  --background-secondary-alt: var(--deep-ocean);
+  
+  --text-normal: var(--text-main);
+  --text-muted: var(--text-muted);
+  
+  --interactive-accent: var(--biolum-teal);
+  --interactive-accent-hover: var(--tentacle-blue);
+  
+  --h1-color: var(--biolum-teal);
+  --h2-color: var(--biolum-teal);
+  --h3-color: var(--tentacle-blue);
+  --h4-color: var(--biolum-teal);
+  --h5-color: var(--electric-purple);
+  --h6-color: var(--tentacle-blue);
+
+  /* Links */
+  --link-color: var(--biolum-teal);
+  --link-color-hover: var(--electric-purple);
+  --link-decoration: underline;
+}
+
+strong, .cm-s-obsidian span.cm-formatting-strong, .cm-s-obsidian span.cm-strong {
+  color:  #39bbfc;
+}
+
+
+/**-------------------**
+| STRONG/BOLD STYLES
+**--------------------**/
+
+.cm-strong,
+strong {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0;
+  color: #7aa2f7;
+  background-color: #7aa2f7;
+  background-image: linear-gradient(180deg, var(--biolum-teal), var(--tentacle-blue));
+}
+
+strong .math.math-inline .MathJax {
+  position: inherit !important;
+}
+
+.cm-strong .cm-selection,
+strong::selection {
+  -webkit-text-fill-color: var(--text-faint);
+}
+
+/**-------------------**
+| <KBD> STYLING
+**--------------------**/
+
+.cm-strong kbd,
+strong kbd {
+  -webkit-text-fill-color: initial;
+}
+
+/* --- Glassmorphism / Water Effect for Sidebars --- */
+.workspace-split.mod-left-split, 
+.workspace-split.mod-right-split {
+    background-color: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(5px);
+    border-right: 1px solid var(--tentacle-blue);
+    border-left: 1px solid var(--tentacle-blue);
+}
+
+
+
+/* --- Scrollbars (The Tentacles) --- */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--deep-ocean);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--biolum-teal), var(--electric-purple));
+    border-radius: 4px;
+}
+
