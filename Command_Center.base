@@ -1,0 +1,226 @@
+formulas:
+  Show Image as Cover: if(file.embeds[0].containsAny("jpg","gif","webp","jpeg","avif", "png"), file.embeds[0])
+  Untitled: ""
+views:
+  - type: table
+    name: Read It Later
+    filters:
+      and:
+        - file.tags.contains("read-later")
+    order:
+      - read-time
+      - file.name
+      - description
+      - file.tags
+    sort:
+      - property: read-time
+        direction: DESC
+      - property: file.name
+        direction: ASC
+    limit: 10
+    indentProperties: true
+    columnSize:
+      note.read-time: 117
+      file.name: 486
+      note.description: 308
+      file.tags: 217
+  - type: cards
+    name: Notes - Card View
+    groupBy:
+      property: file.folder
+      direction: ASC
+    order:
+      - file.name
+      - file.tags
+      - file.folder
+      - formula.Show Image as Cover
+    sort:
+      - property: file.name
+        direction: ASC
+    cardSize: 130
+    image: note.cover
+    imageAspectRatio: 0.55
+  - type: list
+    name: Notes - List View
+    filters:
+      and:
+        - file.ext == "md"
+    groupBy:
+      property: file.folder
+      direction: ASC
+    order:
+      - file.name
+      - file.tags
+      - file.path
+      - file.folder
+      - description
+      - title
+    sort:
+      - property: file.name
+        direction: ASC
+    cardSize: 170
+    imageAspectRatio: 0.9
+    image: note.url
+    imageFit: contain
+    indentProperties: true
+  - type: table
+    name: Notes - Table View
+    groupBy:
+      property: file.folder
+      direction: ASC
+    order:
+      - file.name
+      - title
+      - file.tags
+      - description
+      - formula.Untitled
+      - formula.Show Image as Cover
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      note.title: 197
+    rowHeight: medium
+  - type: list
+    name: Bookmarks
+    filters:
+      and:
+        - file.folder == "Bookmarks"
+    order:
+      - file.name
+      - file.tags
+    sort:
+      - property: file.name
+        direction: ASC
+    indentProperties: true
+  - type: cards
+    name: Books
+    filters:
+      and:
+        - file.folder == "Media/Books"
+    order:
+      - title
+      - date-read
+      - datepublished
+      - genres
+      - description
+      - series
+      - series-number
+      - status
+    image: note.cover
+  - type: table
+    name: Bookthing
+    filters:
+      and:
+        - file.folder.containsAny("Bookthing")
+    groupBy:
+      property: file.folder
+      direction: ASC
+    order:
+      - file.name
+      - file.folder
+      - tags
+  - type: table
+    name: Comics
+    filters:
+      and:
+        - series.contains("Birds of Prey (2023)")
+    order:
+      - file.name
+      - series
+      - series-number
+      - characters
+      - artist
+      - writer
+    columnSize:
+      file.name: 310
+      note.series: 238
+  - type: table
+    name: Dreamscape
+    filters:
+      and:
+        - file.folder.startsWith("AI/Companions/Dreamscape/")
+    groupBy:
+      property: file.folder
+      direction: ASC
+    order:
+      - file.name
+      - created
+      - file.tags
+      - title
+    columnSize:
+      file.name: 486
+      file.tags: 359
+    rowHeight: tall
+  - type: table
+    name: Fanfic
+    filters:
+      and:
+        - file.folder.startsWith("Fanfic")
+    order:
+      - file.name
+      - author
+      - fandom
+      - pairing
+      - characters
+      - file.tags
+      - description
+    columnSize:
+      note.fandom: 132
+  - type: table
+    name: Journal
+    filters:
+      and:
+        - file.folder == "Journal/Daily"
+    order:
+      - file.name
+      - rating
+      - file.tags
+      - cover
+    sort:
+      - property: file.name
+        direction: DESC
+    limit: 5
+    columnSize:
+      file.name: 133
+      note.title: 211
+      note.rating: 126
+    image: note.cover
+    cardSize: 220
+    imageAspectRatio: 1.4
+    rowHeight: medium
+  - type: cards
+    name: Recipes
+    filters:
+      and:
+        - file.tags.contains("recipes")
+    order:
+      - file.name
+      - recipe-calories
+      - recipe-carbs
+      - recipe-grams
+      - recipe-ingredients
+      - recipe-prep-time
+      - recipe-protein
+      - recipe-type
+    image: note.cover
+    imageFit: contain
+  - type: list
+    name: Scenes
+    filters:
+      and:
+        - file.folder == "AI/Roleplay/Scenes"
+    order:
+      - file.name
+      - file.tags
+      - rp-characters
+      - tropes
+    sort:
+      - property: file.name
+        direction: ASC
+    limit: 15
+    columnSize:
+      note.rp-characters: 442
+      note.tropes: 480
+    rowHeight: medium
+    indentProperties: true
