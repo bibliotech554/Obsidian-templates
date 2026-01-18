@@ -112,7 +112,7 @@ views:
     name: Bookthing
     filters:
       and:
-        - file.folder.containsAny("Bookthing")
+        - file.folder.containsAny("tag")
     groupBy:
       property: file.folder
       direction: ASC
@@ -139,7 +139,7 @@ views:
     name: Dreamscape
     filters:
       and:
-        - file.folder.startsWith("AI/Companions/Dreamscape/")
+        - file.folder.startsWith("AI/")
     groupBy:
       property: file.folder
       direction: ASC
@@ -156,7 +156,7 @@ views:
     name: Fanfic
     filters:
       and:
-        - file.folder.startsWith("Fanfic")
+        - file.folder.startsWith("Tasks")
     order:
       - file.name
       - author
@@ -209,7 +209,7 @@ views:
     name: Scenes
     filters:
       and:
-        - file.folder == "AI/Roleplay/Scenes"
+        - file.folder == "Templates"
     order:
       - file.name
       - file.tags
