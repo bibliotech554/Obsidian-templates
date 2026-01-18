@@ -1,7 +1,7 @@
 ---
 tags:
   - command-center
-banner: "![[the digital dreamscape v4.jpg]]"
+banner: 
 tasks:
 tasks_uncompleted:
 tasks_completed:
@@ -19,11 +19,11 @@ cssclasses:
 >
 >> [!todo|wide -5]+ tasks
 >> ### house
->> - [ ] scrub stove
->> - [ ] scrub toilet
+>> - [ ] task
+>> - [ ] task
 >> ### self
->> - [x] face (AM)
->> - [ ] face (PM)
+>> - [x] task
+>> - [ ] task
 >>
 >
 >> [!warning]+ Personal
@@ -38,11 +38,10 @@ cssclasses:
 # and countless screaming argonauts
 > [!multi-column]
 >
->> [!note|wide-3]+ dreamscape
+>> [!note|wide-3]+ note
 >> ![[Command Center.canvas]]
 >
 >> [!warning|wide-2]+ Personal
->> ![[BOOKTHING TIMELINE.canvas]]
 >
 >> [!summary|min-0]+ Charity
 >> your notes or lists here. using markdown formatting
