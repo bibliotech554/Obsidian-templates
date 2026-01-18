@@ -1,0 +1,11 @@
+---
+title:
+author:
+cover:
+source:
+description:
+pages:
+genres:
+status:
+date-read:
+---
