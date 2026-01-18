@@ -1,0 +1,8 @@
+div.markdown-reading-view, div.markdown-source-view {
+  background-image: radial-gradient(
+      teal 1px,
+  transparent 0px
+    );
+background-size: 40px 40px;
+}
+
