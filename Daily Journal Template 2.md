@@ -3,7 +3,7 @@ journal: Daily
 journal-date:
 title:
 rating:
-banner: "![[the digital dreamscape v4.jpg]]"
+banner:
 tags:
   - journal
 banner_position: center
@@ -21,11 +21,11 @@ cover:
 >
 >> [!todo|wide -5]+ tasks
 >> ### house
->> - [ ] scrub stove
->> - [ ] scrub toilet
+>> - [ ] task
+>> - [ ] task
 >> ### self
->> - [x] face (AM)
->> - [ ] face (PM)
+>> - [x] task
+>> - [ ] task
 >>
 >
 >> [!entry]+ dear diary
@@ -33,13 +33,13 @@ cover:
 >
 
 # after killing jason off
-> [!dreamscape] dreamscape
+> [!note] note
 > -
 
 
 > [!multi-column]
 >
->> [!writing|wide-2]+ BOOKTHING
+>> [!writing|wide-2]+ writing
 >> -
 >> -
 >> -
@@ -54,7 +54,7 @@ cover:
 # and countless screaming argonauts
 > [!multi-column]
 >
->> [!note|wide-3]+ RP
+>> [!note|wide-3]+ note
 >> your notes or lists here. using markdown formatting
 >
 >> [!summary|min-2]+ tomorrow
